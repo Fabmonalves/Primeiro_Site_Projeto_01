@@ -1,7 +1,7 @@
 @font-face {
 	font-family: 'OpenSans';
 	src: url("../fonts/Open_Sans/OpenSans-Regular.ttf");
-	font-size: 1em;
+	font-size: 1em; /* media em e´medida relativa */
 }
 @font-face {
 	font-family: 'OpenSans-Light';
@@ -17,6 +17,7 @@ header {
 	z-index: 2;
     position: relative;
 }
+
 header .container {
 	position: relative;
 }
@@ -24,12 +25,23 @@ header .header-black {
 	background-color: #000;
 	height: 40px;
 }
+header #logotipo {
+	position: absolute;
+	top: 20px;
+	z-index: 3;
+}
 header .header-black li {
 	background-image: url("../img/clubs.png");
 	background-repeat: no-repeat;
 	display: inline-block;
 	margin: 4px;
 }
+header .header-black li a {
+	width: 32px;
+	height: 32px;
+	display: block;
+}
+
 header .header-black li.club-01 {
 	background-position: 0px 0px;
 }
@@ -96,16 +108,7 @@ header .header-black li.club-21 {
 header .header-black li.club-22 {
 	background-position: -1000px 0px;
 }
-header .header-black li a {
-	width: 32px;
-	height: 32px;
-	display: block;
-}
-header #logotipo {
-	position: absolute;
-	top: 20px;
-	z-index: 3;
-}
+
 #banner h1.efeito {
 	color: red;
 	font-size: 12em;
@@ -206,14 +209,12 @@ header #logotipo {
 	margin: 0 auto;
 }
 #news .thumbnails {
-	margin-top: 20px;
-}
-#news .thumbnails {
 	color:  #5e299a;
 	font-size: 18px;
 	font-family: 'OpenSans';
 	font-weight: bold;
 	margin-bottom: 0;
+	margin-top: 20px;
 }
 #news .thumbnails time {
 	color: #a7a7a7;
